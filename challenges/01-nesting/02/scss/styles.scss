@@ -15,7 +15,35 @@ body {
 }
 
 .btn {
-  /* your code starts here */
-
-  /* your code ends here */
+  padding: 1em 2em;
+  display: inline-block;
+  text: {
+    transform: uppercase;
+    decoration: none;
+  }
+  color: white;
+  cursor: pointer;
+  border: 0;
+  &__primary {
+    background-color: $clr-primary-400;
+    &:hover,
+    &:focus {
+      background-color: $clr-primary-500;
+    }
+  }
+  &__secondary {
+    background-color: $clr-secondary-400;
+    &:hover,
+    &:focus {
+      background-color: $clr-secondary-500;
+    }
+  }
+  &__accent {
+    background-color: $clr-accent-400;
+    color: #000;
+    &:hover,
+    &:focus {
+      background-color: $clr-accent-500;
+    }
+  }
 }
