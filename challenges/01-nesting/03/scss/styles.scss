@@ -63,4 +63,13 @@ section {
 .text-subdued {
   font-size: 1rem;
   // your code here
+  .surface-primary & {
+    font-size: 0.8rem;
+  }
+  .surface-secondary & {
+    font-size: 0.8rem;
+  }
+  .surface-accent & {
+    font-size: 0.8rem;
+  }
 }
