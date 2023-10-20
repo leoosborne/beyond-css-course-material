@@ -1,0 +1,37 @@
+body {
+  margin: 4rem;
+  font-size: 1.25rem;
+  font-family: system-ui, sans-serif;
+  text-align: center;
+}
+
+.btn {
+  padding: 1em 2em;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  border: 0;
+}
+.btn__primary {
+  background-color: hsl(206, 33%, 37%);
+}
+.btn__primary:hover, .btn__primary:focus {
+  background-color: hsl(206, 33%, 25%);
+}
+.btn__secondary {
+  background-color: hsl(253, 27%, 35%);
+}
+.btn__secondary:hover, .btn__secondary:focus {
+  background-color: hsl(253, 27%, 20%);
+}
+.btn__accent {
+  background-color: hsl(45, 82%, 65%);
+  color: #000;
+}
+.btn__accent:hover, .btn__accent:focus {
+  background-color: hsl(45, 82%, 45%);
+}
+
+/*# sourceMappingURL=styles.css.map */
