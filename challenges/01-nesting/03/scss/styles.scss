@@ -46,6 +46,18 @@ section {
   text-decoration: none;
   text-transform: uppercase;
   // your code here
+  .surface-primary & {
+    background-color: #fff;
+    color: #270808;
+  }
+  .surface-secondary & {
+    background-color: #fff;
+    color: #270808;
+  }
+  .surface-accent & {
+    background: #270808;
+    color: #fff;
+  }
 }
 
 .text-subdued {
