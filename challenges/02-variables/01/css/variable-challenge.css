@@ -53,10 +53,10 @@ body {
 .flex-group {
   display: flex;
   gap: 1rem;
+  min-width: fit-content;
 }
 .flex-group .btn {
   flex-shrink: 0;
-  overflow: unset;
 }
 
 /*# sourceMappingURL=variable-challenge.css.map */
