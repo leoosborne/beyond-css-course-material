@@ -1,3 +1,7 @@
+$clr-white: #f8f7f7;
+$clr-red: #da3f0b;
+$clr-black: #201e1f;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,6 +16,8 @@ body {
   display: grid;
   height: 100vh;
   place-items: center;
+  background-color: $clr-white;
+  color: $clr-black;
 }
 
 .card {
@@ -19,15 +25,42 @@ body {
   gap: 0.75em;
   width: min(90%, 60rem);
   padding: 2em;
+  box-shadow: 0 0 20px $clr-black;
+  &__title {
+    color: $clr-red;
+  }
+  &__text {
+    color: $clr-black;
+  }
 }
 
 .btn {
   display: inline-block;
   padding: 0.5em 1.5em;
   text-decoration: none;
+  border: 2px solid $clr-red;
+  border-radius: 0.5rem;
+  &--primary {
+    background-color: $clr-red;
+    color: $clr-white;
+  }
+  &--outline {
+    background-color: $clr-white;
+    color: $clr-black;
+  }
+  &:hover,
+  &:focus {
+    color: $clr-white;
+    background-color: $clr-black;
+    box-shadow: 0 0 10px $clr-red;
+  }
 }
 
 .flex-group {
   display: flex;
   gap: 1rem;
+  .btn {
+    flex-shrink: 0;
+    overflow: unset;
+  }
 }

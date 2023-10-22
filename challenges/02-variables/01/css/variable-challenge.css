@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-size: 1.75rem;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  /* this is being used to center the content on the screen */
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  background-color: #f8f7f7;
+  color: #201e1f;
+}
+
+.card {
+  display: grid;
+  gap: 0.75em;
+  width: min(90%, 60rem);
+  padding: 2em;
+  box-shadow: 0 0 20px #201e1f;
+}
+.card__title {
+  color: #da3f0b;
+}
+.card__text {
+  color: #201e1f;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  border: 2px solid #da3f0b;
+  border-radius: 0.5rem;
+}
+.btn--primary {
+  background-color: #da3f0b;
+  color: #f8f7f7;
+}
+.btn--outline {
+  background-color: #f8f7f7;
+  color: #201e1f;
+}
+.btn:hover, .btn:focus {
+  color: #f8f7f7;
+  background-color: #201e1f;
+  box-shadow: 0 0 10px #da3f0b;
+}
+
+.flex-group {
+  display: flex;
+  gap: 1rem;
+}
+.flex-group .btn {
+  flex-shrink: 0;
+  overflow: unset;
+}
+
+/*# sourceMappingURL=variable-challenge.css.map */
