@@ -1,6 +1,6 @@
-$clr-white: #f8f7f7;
-$clr-red: #da3f0b;
-$clr-black: #201e1f;
+$clr-neutral-100: #f8f7f7;
+$clr-primary-400: #da3f0b;
+$clr-neutral-900: #201e1f;
 
 * {
   box-sizing: border-box;
@@ -16,8 +16,8 @@ body {
   display: grid;
   height: 100vh;
   place-items: center;
-  background-color: $clr-white;
-  color: $clr-black;
+  background-color: $clr-neutral-100;
+  color: $clr-neutral-900;
 }
 
 .card {
@@ -25,12 +25,12 @@ body {
   gap: 0.75em;
   width: min(90%, 60rem);
   padding: 2em;
-  box-shadow: 0 0 20px $clr-black;
+  box-shadow: 0 0 20px $clr-neutral-900;
   &__title {
-    color: $clr-red;
+    color: $clr-primary-400;
   }
   &__text {
-    color: $clr-black;
+    color: $clr-neutral-900;
   }
 }
 
@@ -38,21 +38,21 @@ body {
   display: inline-block;
   padding: 0.5em 1.5em;
   text-decoration: none;
-  border: 2px solid $clr-red;
+  border: 2px solid $clr-primary-400;
   border-radius: 0.5rem;
   &--primary {
-    background-color: $clr-red;
-    color: $clr-white;
+    background-color: $clr-primary-400;
+    color: $clr-neutral-100;
   }
   &--outline {
-    background-color: $clr-white;
-    color: $clr-black;
+    background-color: $clr-neutral-100;
+    color: $clr-neutral-900;
   }
   &:hover,
   &:focus {
-    color: $clr-white;
-    background-color: $clr-black;
-    box-shadow: 0 0 10px $clr-red;
+    color: $clr-neutral-100;
+    background-color: $clr-neutral-900;
+    box-shadow: 0 0 10px $clr-primary-400;
   }
 }
 

@@ -53,7 +53,7 @@ body {
 .flex-group {
   display: flex;
   gap: 1rem;
-  min-width: fit-content;
+  min-width: 200px;
 }
 .flex-group .btn {
   flex-shrink: 0;
