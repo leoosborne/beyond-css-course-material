@@ -55,8 +55,5 @@ body {
   gap: 1rem;
   min-width: 200px;
 }
-.flex-group .btn {
-  flex-shrink: 0;
-}
 
 /*# sourceMappingURL=variable-challenge.css.map */
