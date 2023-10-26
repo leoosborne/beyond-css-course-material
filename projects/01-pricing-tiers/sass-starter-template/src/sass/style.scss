@@ -45,6 +45,10 @@ $size-36: 2.25rem;
   font: inherit;
 }
 
+///////////////
+//main styles
+///////////////
+
 body {
   font: {
     size: $fs-400;
@@ -59,4 +63,82 @@ body {
 .container {
   width: min(100% - 2rem, 60rem);
   margin-inline: auto;
+  // border: 2px solid hotpink;
+}
+
+.page-title {
+  color: $clr-primary-400;
+  font-size: $fs-900;
+  margin-block: $size-32;
+}
+
+.pricing-plans {
+  border: $size-8 solid $clr-primary-400;
+  display: flex;
+}
+
+.inverted {
+  background-color: $clr-primary-400;
+  color: $clr-neutral-100;
+}
+
+.tier {
+  flex: 1;
+  padding: $size-36;
+
+  display: grid;
+  gap: $size-20;
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: $fw-700;
+    color: $clr-primary-400;
+    .inverted & {
+      color: $clr-neutral-100;
+    }
+  }
+
+  &__feature-list {
+    list-style: none;
+  }
+
+  &__list-item {
+    &:not(:last-child)::after {
+      content: "";
+      display: block;
+      height: 1px;
+      margin-block: $size-20;
+      background-color: $clr-neutral-900;
+      opacity: 0.2;
+    }
+  }
+
+  &__price {
+    font-size: $fs-800;
+    font-weight: $fw-700;
+    span {
+      font-size: $fs-600;
+      font-weight: $fw-400;
+    }
+  }
+}
+
+.button {
+  cursor: pointer;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: $fw-700;
+  color: $clr-neutral-100;
+  background-color: $clr-primary-400;
+  padding: 1em 1.5em;
+  justify-self: center;
+  .inverted & {
+    background-color: $clr-neutral-100;
+    color: $clr-primary-400;
+  }
+  &:hover,
+  &:focus {
+    background-color: rgb($clr-neutral-900, 0.7);
+    color: $clr-neutral-100;
+  }
 }
