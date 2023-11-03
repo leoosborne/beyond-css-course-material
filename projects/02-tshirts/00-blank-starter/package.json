@@ -1,7 +1,7 @@
 {
-  "name": "project-name",
+  "name": "02-tshirts-00",
   "version": "1.0.0",
-  "description": "Project description",
+  "description": "Beyond-CSS-Module-1",
   "main": "public/index.html",
   "author": "author name",
   "scripts": {
