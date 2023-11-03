@@ -1,6 +1,42 @@
+@mixin linear-gradient($deg: 180deg, $clr-1: #5e6c6b, $clr-2: #aeaeae) {
+  background-image: linear-gradient($deg, $clr-1, $clr-2);
+}
+
+@mixin pseudo-underline($wide: 5rem, $high: 2px, $bg: #000, $marg: 2rem auto) {
+  width: $wide;
+  height: $high;
+  background-color: $bg;
+  margin: $marg;
+  display: block;
+  content: " ";
+}
+
+@mixin ui-element(
+  $size: 3em,
+  $color: rgba(156, 197, 158, 0.925),
+  $bg-color: rgba(14, 7, 33, 0.939),
+  $hover-color: rgb(80, 75, 75),
+  $hover-bg-color: #22d2
+) {
+  padding: $size;
+  color: $color;
+  background-color: $bg-color;
+  display: inline-block;
+  &:focus {
+    color: hotpink;
+    background-color: #062f15;
+  }
+
+  &:hover {
+    color: #000;
+    background-color: white;
+  }
+}
+
 body {
   font-family: system-ui;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .section-one,
@@ -8,4 +44,35 @@ body {
 .section-three {
   text-align: center;
   padding: 10vh 0;
+}
+
+.section-one {
+  @include linear-gradient();
+}
+.section-two {
+  @include linear-gradient(to top, chartreuse, orange);
+}
+.section-three {
+  @include linear-gradient(to bottom left, hotpink, purple);
+}
+.title::after {
+  @include pseudo-underline();
+}
+.button-one {
+  @include ui-element(0.5em, black, white, orange, hotpink);
+}
+.button-two {
+  @include ui-element(1em, yellow, rgb(59, 15, 15), grey, rgb(59, 15, 90));
+  font-size: 1em;
+}
+.badge-one {
+  @include ui-element(
+    0.5em 1.5em,
+    $hover-color: rgb(34, 61, 77),
+    $hover-bg-color: rgb(93, 191, 100)
+  );
+}
+.badge-two {
+  @include ui-element(0.75em 2.25em);
+  font-size: 18px;
 }
