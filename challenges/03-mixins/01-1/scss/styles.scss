@@ -1,0 +1,96 @@
+/* declare the @mixins first */
+@mixin linear-gradient($deg: 45deg, $clr-1: orange, $clr-2: lightgrey) {
+  background-image: linear-gradient($deg, $clr-1, $clr-2);
+}
+
+@mixin pseudo-underline(
+  $width: 10rem,
+  $height: 2px,
+  $bg: #3aa94c,
+  $margin: 2rem auto
+) {
+  content: " ";
+  display: block;
+  width: $width;
+  height: $height;
+  background-color: $bg;
+  margin: $margin;
+}
+
+@mixin ui-element(
+  $size: 1rem 3rem,
+  $color: #cce9cd,
+  $bg-color: #053e1b,
+  $hover-color: yellow,
+  $hover-bg-color: rgb(31, 22, 90)
+) {
+  display: inline-block;
+  padding: $size;
+  color: $color;
+  background-color: $bg-color;
+  &:focus,
+  &:hover {
+    color: $hover-color;
+    background-color: $hover-bg-color;
+  }
+  text-decoration: none;
+}
+
+body {
+  font-family: system-ui;
+  margin: 0;
+}
+
+.section-one,
+.section-two,
+.section-three {
+  text-align: center;
+  padding: 10vh 0;
+}
+
+.title {
+  &::after {
+    @include pseudo-underline();
+  }
+}
+
+.section-one {
+  @include linear-gradient($deg: 12deg);
+}
+
+.section-two {
+  @include linear-gradient(-15deg, blue, green);
+  color: #fff;
+}
+
+.section-three {
+  @include linear-gradient(0deg, cyan, magenta);
+}
+
+.button-one {
+  @include ui-element($size: 0.5em 1.5em);
+  font-size: 0.8em;
+}
+
+.button-two {
+  @include ui-element(
+    $color: #1f0c3b,
+    $bg-color: #8e94d2,
+    $hover-color: #492e08,
+    $hover-bg-color: #e1972f
+  );
+}
+
+.badge-one {
+  @include ui-element($size: 0.33em 1em);
+  font-size: 0.75rem;
+}
+
+.badge-two {
+  @include ui-element(
+    $color: #b297cb,
+    $bg-color: #3f1962,
+    $hover-color: #ef5a31,
+    $hover-bg-color: #3e150a
+  );
+}
