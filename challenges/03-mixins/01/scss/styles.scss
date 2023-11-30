@@ -47,7 +47,7 @@ body {
 }
 
 .section-one {
-  @include linear-gradient();
+  @include linear-gradient($deg: -15deg, $clr-1: #527888, $clr-2: #f14e33);
 }
 .section-two {
   @include linear-gradient(to top, chartreuse, orange);
